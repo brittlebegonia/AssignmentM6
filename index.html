@@ -12,12 +12,58 @@
         label           {font-weight: bold;}
         input, select   {margin-bottom: 10px;}
         form            {width: 30%; padding: 20px;}
+        body {
+            background-color: #f8f9fa;
+        }
+
     </style>
 </head>
 <body class="m-4">
     <h1>Employee Management System</h1>
     <form id="empForm">
-     
+     <div class="container">
+
+    <form class="form-container" onsubmit="return addEmployee()">
+
+        <!-- Employee ID -->
+        <div class="mb-3">
+            <label class="form-label">8-Digit Employee ID</label>
+            <input type="text" class="form-control" id="empId" required>
+        </div>
+
+        <!-- Extension -->
+        <div class="mb-3">
+            <label class="form-label">4-Digit Extension</label>
+            <input type="text" class="form-control" id="extension" required>
+        </div>
+
+        <!-- Full Name -->
+        <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="firstName" required>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+
+        <!-- Department -->
+        <div class="mb-3">
+            <label class="form-label">Department</label>
+            <select class="form-select" id="department">
+                <option>Administrative</option>
+                <option>Engineering</option>
+                <option>Executive</option>
+                <option>Marketing</option>
+                <option>Quality Assurance</option>
+                <option>Sales</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Add Employee</button>
     </form>
 </body>
 </html>
